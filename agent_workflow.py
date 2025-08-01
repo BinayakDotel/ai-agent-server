@@ -19,6 +19,7 @@ class AgentWorkflow:
             model="huggingface/meta-llama/Llama-3.2-3B-Instruct:novita",
             base_url="https://router.huggingface.co/v1",
             api_key=os.environ["HF_TOKEN"],
+            model_kwargs={"verify_model": False}
         )
         self.planner = None
         self.writer = None

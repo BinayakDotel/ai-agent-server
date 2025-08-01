@@ -1,9 +1,14 @@
 # Using flask to make an api
 # import necessary libraries and functions
 from flask import Flask, jsonify, request
-from agent_workflow import AgentWorkflow
 from datetime import datetime
 import logging
+import sys
+import os
+
+# Add the parent directory to the Python path to import agent_workflow
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from agent_workflow import AgentWorkflow
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
