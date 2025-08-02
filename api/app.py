@@ -105,7 +105,7 @@ def disp(num):
     return jsonify({'data': num**2})
 
 
-# driver function
-if __name__ == '__main__':
+# # driver function
+# if __name__ == '__main__':
 
-    app.run(debug = True)
+#     app.run(debug = True)
