@@ -1,22 +1,16 @@
 from crewai import Agent, Task, Crew, LLM
 from warnings import filterwarnings
 import os
-from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
 
 class AgentWorkflow:
     def __init__(self):
-        # Initialize OpenAI client with Hugging Face's inference provider
-        client = OpenAI(
-            base_url="https://router.huggingface.co/v1",
-            api_key=os.environ["HF_TOKEN"],
-        )
         
         # Initialize LLM with the OpenAI client configuration
         self.llm = LLM(
-            model="huggingface/meta-llama/Llama-3.2-3B-Instruct:novita",
+            model="huggingface/deepseek-ai/DeepSeek-R1:novita",
             base_url="https://router.huggingface.co/v1",
             api_key=os.environ["HF_TOKEN"],
             model_kwargs={"verify_model": False}
